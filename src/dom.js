@@ -6,12 +6,12 @@ window.dom = {
     return container.content.firstChild;
   },
 
-  // 在谁的之后插入元素
+  // 在node之后插入node2元素
   after(node, node2) {
     node.parentNode.insertBefore(node2, node.nextSibling);
   },
 
-  // 在谁的之前插入元素
+  // 在node的之前插入node2元素
   before(node, node2) {
     node.parentNode.insertBefore(node2, node);
   },
@@ -30,7 +30,7 @@ window.dom = {
     node.parentNode.removeChild(node);
     return node; //返回删除对象
   },
-
+  //删除node的所有子节点
   empty(node) {
     const { children } = node; // 结构赋值
     const array = [];
